@@ -2,10 +2,15 @@ import java.text.NumberFormat;
 
 public class Mind
 {
-
+	////////////////////
+	//INSTANCE VARIABLES
+	///////////////////
 	double[][] inputData, outputData;
 	Network network;
 	
+	///////////////
+	//CONSTRUCTORS
+	///////////////
 	public Mind(Network n, double[][] inputs, double[][] outputs)
 	{
 		network = n;
@@ -13,12 +18,18 @@ public class Mind
 		outputData = outputs;
 	}
 	
+	/////////////////
+	//MUTATOR METHODS
+	/////////////////
 	public void mutateData(double[][] i, double[][] o)
 	{
 		inputData = i;
 		outputData = o;
 	}
 	
+	//////////////////
+	//ACCESSOR METHODS
+	//////////////////
 	public double[][] retrieveInputData()
 	{
 		return inputData;
@@ -29,6 +40,9 @@ public class Mind
 		return outputData;
 	}
 	
+	///////////////
+	//OTHER METHODS
+	///////////////
 	public void learn(int iterations)
 	{
 		NumberFormat percentFormat = NumberFormat.getPercentInstance(); 
